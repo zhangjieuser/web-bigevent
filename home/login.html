@@ -5,11 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>大事件-登录-注册</title>
+    <!-- layui -->
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <!-- person css -->
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 
 <body>
+    <!-- header logo  -->
+    <div class="layui-main">
+        <img src="../assets/images/logo.png" alt="" />
+    </div>
+    <!-- login -->
+    <div class="loginAndRegBox">
+        <div class="title-box"></div>
+        <!-- login div -->
+        <div class="login-box">
+            <!-- login form -->
+            <form class="layui-form" action="" id="form_login">
+                <!-- user name -->
+                <div class="layui-form-item">
+                    <svg t="1651373758883" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3734" width="200" height="200"><path d="M828.3 818.2c-8-66.8-31.8-129.9-68.7-182.4-31.8-45.2-72.1-81-117.7-104.6 27.5-20.6 49.7-47.2 64.9-78 19.6-39.6 26.4-84.2 19.7-128.8-6.5-43.2-26-83.2-56.4-115.7-30.6-32.7-69.2-54.7-111.9-63.6-15.7-3.3-31.5-4.9-47-4.9-58.2 0-112.9 22.7-154 63.8s-63.8 95.8-63.8 154c0 38.3 10.2 76 29.5 108.9 14.7 25 34.3 46.9 57.6 64.4-45.6 23.7-86 59.5-117.7 104.7-36.9 52.5-60.7 115.5-68.7 182.4-2 16.3 3.2 32.8 14.2 45.1 11.1 12.5 26.9 19.7 43.5 19.7h518.8c16.6 0 32.5-7.2 43.5-19.7 10.9-12.6 16.1-29.1 14.2-45.3zM429.2 586.4c20.1-8.5 33.6-27.3 35.2-49.2 1.5-21.8-9.2-42.4-28.1-53.7-45.2-27-72.2-74-72.2-125.6 0-81.1 65.9-147 147-147 10.6 0 21.5 1.1 32.5 3.4 57.6 12 103.9 61.6 112.8 120.6 9 60.3-18 117.3-70.4 148.7-18.8 11.2-29.5 31.7-28.1 53.7 1.6 21.9 15 40.7 35.2 49.2 84.6 35.7 146 121.6 162.5 225.6H266.4C283.3 708 344.8 622 429.2 586.4z" p-id="3735"></path></svg>
+                    <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+                </div>
+                <!-- password -->
+                <div class="layui-form-item">
+                    <svg t="1651373856363" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4635" width="200" height="200"><path d="M597.333333 469.333333v-42.666666h85.333334v42.666666h-85.333334z m-170.666666 0H341.333333V341.333333c0-93.866667 76.8-170.666667 170.666667-170.666666s170.666667 76.8 170.666667 170.666666v42.666667h-85.333334V341.333333c0-46.933333-38.4-85.333333-85.333333-85.333333s-85.333333 38.4-85.333333 85.333333v128z m-170.666667-42.666666h512v426.666666H256V426.666667z m85.333333 85.333333v256h341.333334v-256H341.333333z m170.666667 170.666667c-25.6 0-42.666667-17.066667-42.666667-42.666667s17.066667-42.666667 42.666667-42.666667 42.666667 17.066667 42.666667 42.666667-17.066667 42.666667-42.666667 42.666667z" fill="#444444" p-id="4636"></path></svg>
+                    <input type="password" name="password" lay-verify="required|pwd" autocomplete="off" placeholder="请输入密码" class="layui-input">
+                </div>
+                <!-- login button -->
+                <div class="layui-form-item">
+                    <button type="submit" class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit="" lay-filter="demo1">登录</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link_reg">去注册账号</a>
+                </div>
+            </form>
+        </div>
+        <!-- reg div -->
+        <div class="reg-box">
+            <!-- reg form -->
+            <form class="layui-form" action="" id="form_reg">
+                <!-- user name -->
+                <div class="layui-form-item">
+                    <svg t="1651373758883" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3734" width="200" height="200"><path d="M828.3 818.2c-8-66.8-31.8-129.9-68.7-182.4-31.8-45.2-72.1-81-117.7-104.6 27.5-20.6 49.7-47.2 64.9-78 19.6-39.6 26.4-84.2 19.7-128.8-6.5-43.2-26-83.2-56.4-115.7-30.6-32.7-69.2-54.7-111.9-63.6-15.7-3.3-31.5-4.9-47-4.9-58.2 0-112.9 22.7-154 63.8s-63.8 95.8-63.8 154c0 38.3 10.2 76 29.5 108.9 14.7 25 34.3 46.9 57.6 64.4-45.6 23.7-86 59.5-117.7 104.7-36.9 52.5-60.7 115.5-68.7 182.4-2 16.3 3.2 32.8 14.2 45.1 11.1 12.5 26.9 19.7 43.5 19.7h518.8c16.6 0 32.5-7.2 43.5-19.7 10.9-12.6 16.1-29.1 14.2-45.3zM429.2 586.4c20.1-8.5 33.6-27.3 35.2-49.2 1.5-21.8-9.2-42.4-28.1-53.7-45.2-27-72.2-74-72.2-125.6 0-81.1 65.9-147 147-147 10.6 0 21.5 1.1 32.5 3.4 57.6 12 103.9 61.6 112.8 120.6 9 60.3-18 117.3-70.4 148.7-18.8 11.2-29.5 31.7-28.1 53.7 1.6 21.9 15 40.7 35.2 49.2 84.6 35.7 146 121.6 162.5 225.6H266.4C283.3 708 344.8 622 429.2 586.4z" p-id="3735"></path></svg>
+                    <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+                </div>
+                <!-- password -->
+                <div class="layui-form-item">
+                    <svg t="1651373856363" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4635" width="200" height="200"><path d="M597.333333 469.333333v-42.666666h85.333334v42.666666h-85.333334z m-170.666666 0H341.333333V341.333333c0-93.866667 76.8-170.666667 170.666667-170.666666s170.666667 76.8 170.666667 170.666666v42.666667h-85.333334V341.333333c0-46.933333-38.4-85.333333-85.333333-85.333333s-85.333333 38.4-85.333333 85.333333v128z m-170.666667-42.666666h512v426.666666H256V426.666667z m85.333333 85.333333v256h341.333334v-256H341.333333z m170.666667 170.666667c-25.6 0-42.666667-17.066667-42.666667-42.666667s17.066667-42.666667 42.666667-42.666667 42.666667 17.066667 42.666667 42.666667-17.066667 42.666667-42.666667 42.666667z" fill="#444444" p-id="4636"></path></svg>
+                    <input type="password" name="password" lay-verify="required|pwd" autocomplete="off" placeholder="请输入密码" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <svg t="1651373856363" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4635" width="200" height="200"><path d="M597.333333 469.333333v-42.666666h85.333334v42.666666h-85.333334z m-170.666666 0H341.333333V341.333333c0-93.866667 76.8-170.666667 170.666667-170.666666s170.666667 76.8 170.666667 170.666666v42.666667h-85.333334V341.333333c0-46.933333-38.4-85.333333-85.333333-85.333333s-85.333333 38.4-85.333333 85.333333v128z m-170.666667-42.666666h512v426.666666H256V426.666667z m85.333333 85.333333v256h341.333334v-256H341.333333z m170.666667 170.666667c-25.6 0-42.666667-17.066667-42.666667-42.666667s17.066667-42.666667 42.666667-42.666667 42.666667 17.066667 42.666667 42.666667-17.066667 42.666667-42.666667 42.666667z" fill="#444444" p-id="4636"></path></svg>
+                    <input type="password" name="repassword" lay-verify="required|pwd|repwd" autocomplete="off" placeholder="再次确认密码" class="layui-input">
+                </div>
+                <!-- reg button -->
+                <div class="layui-form-item">
+                    <button type="submit" class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit="" lay-filter="demo1">注册</button>
+                </div>
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link_login">去登录</a>
+                </div>
+            </form>
+        </div>
 
+    </div>
+    <!-- layui js -->
+    <script src="../assets/lib/layui/layui.js "></script>
+    <!-- jquery -->
+    <script src="../assets/lib/jquery.min.js"></script>
+    <script src="../assets/js/baseAPI.js"></script>
+    <!-- person js -->
+    <script src="../assets/js/login.js"></script>
 </body>
 
 </html>
